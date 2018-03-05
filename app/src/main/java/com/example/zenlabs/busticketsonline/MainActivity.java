@@ -28,4 +28,12 @@ public class MainActivity extends AppCompatActivity {
 // Hide the status bar.
 
     }
+    @Override
+    public void onBackPressed() {
+        if(myWebView.canGoBack()){
+            myWebView.goBack();
+        } else {
+            super.onBackPressed();
+        }
+    }
 }
